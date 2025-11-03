@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import { assets } from '../assets/assets'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { AppContext } from '../context/AppContext';
+import { toast } from 'react-toastify';
 
 const Navbar = () => {
     const { token,setToken,userData}=useContext(AppContext)
@@ -11,6 +12,8 @@ const Navbar = () => {
     const logout =()=>{
         setToken(false)
         localStorage.removeItem('token')
+        navigate('/')
+        toast.success("Logout Successful")
     }
 
     return (

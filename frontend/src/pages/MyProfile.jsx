@@ -70,7 +70,7 @@ const MyProfile = () => {
           <p className='text-blue-500 '>{userData.email}</p>
           <p className='font-medium'>Phone:</p>
           {
-            isEdit ? <input className='bg-gray-100 max-w-52 ' type="text" value={userData.phone} onChange={e => setuserData(prev => ({ ...prev, phone: e.target.value }))} /> : <p>{userData.phone}</p>
+            isEdit ? <input className='bg-gray-100 max-w-52 ' type="tel" value={userData.phone} onChange={e => setuserData(prev => ({ ...prev, phone: e.target.value }))} /> : <p>{userData.phone}</p>
           }
           <p className='font-medium'>Address:</p>
           {

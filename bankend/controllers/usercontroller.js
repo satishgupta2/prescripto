@@ -63,7 +63,7 @@ const loginUser =async(req,res)=>{
             const token=jwt.sign({id:user._id},process.env.JWT_SECRET)
             res.json({success:true,token})
         }else{
-            res.json({success:true,message:"Invalid credentails "})
+            res.json({success:false,message:"Invalid credentails "})
         }
 
     } catch (error) {

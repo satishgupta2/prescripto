@@ -36,6 +36,8 @@ const [userData, setuserData] = useState(false)
             if(data.success){
                 setuserData(data.userData)
                 // console.log(data)
+            }else{
+                toast.error(data.message)
             }
         } catch (error) {
             console.log(error)

@@ -21,7 +21,7 @@ const slotDateFormat=(slotDate)=>{
     try {
       const {data}=await axios.get(backendUrl +'/api/user/appointments',{headers:{token}})
     if(data.success){
-      setAppointments(data.appointments.reverse ())
+      setAppointments(data.appointments.reverse())
       console.log(data.appointments)
 
     }
@@ -95,7 +95,7 @@ const appointmentRazorpay =async (appointmentId)=>{
       getUserAppointments()
 
     }
-  }, [])
+  }, [token])
   
 
   return (
